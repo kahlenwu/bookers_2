@@ -16,6 +16,7 @@
   <% end %>
 </table>
 <hr>
+<p>コメントする</p>
 <div>
   <%= form_with(model:[@book, @book_comment], local: true) do |f| %>
   <%= f.text_area :comment, rows: '5', placeholder: "コメントをここに", class: "form-control" %>
