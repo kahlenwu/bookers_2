@@ -8,7 +8,6 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -51,8 +50,11 @@
         </div>
       </nav>
     </header>
+      <% if user_signed_in? %>
+        <%= render 'layouts/search' %>
+      <% end %>
     <main>
-        <p id="notice"><%= notice %></p>
+      <p id="notice"><%= notice %></p>
     <%= yield %>
     </main>
     <footer>
